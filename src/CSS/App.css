@@ -1,0 +1,24 @@
+.menu-top-text-block{
+    background-color: #0f024f;
+    text-align: center;
+}
+
+.menu-top-text{
+    font-size: 20px;
+    white-space: nowrap;
+    color: white;
+}
+
+.menu-body{
+    background: linear-gradient(#090b80, #411731);
+}
+
+.hover-darken {
+  transition: background-color 0.2s ease;
+}
+.hover-darken:hover {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+}
+.hover-darken:active {
+  background-color: rgba(0, 0, 0, 0.4) !important;
+}

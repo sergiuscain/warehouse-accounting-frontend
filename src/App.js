@@ -1,7 +1,6 @@
 import LeftMenu from "./Components/leftMenu";
 import { useState } from "react";
 import "./CSS/App.css";
-import { Row, Col, Container } from "react-bootstrap";
 import Balance from "./Components/Balance";
 import Receipts from "./Components/Receipts";
 import UnitOfMeasurement from "./Components/UnitOfMeasurement";
@@ -28,18 +27,19 @@ function App() {
 
   return (
     <div className="App">
-      <Container fluid className="px-0">
-        <Row className="g-0">
-          <Col md={2} className="left-menu-col">
+      <div className="container-fluid">
+        <div className="row">
+          {/* Левое меню - фиксированной ширины */}
+          <div className="col-md-3 col-lg-2 p-0">
             <LeftMenu setActiveComponent={setActiveComponent} />
-          </Col>
-          <Col md={10} className="content-col">
-            <div className="content-container">
-              {renderComponent()}
-            </div>
-          </Col>
-        </Row>
-      </Container>
+          </div>
+          
+          {/* Основной контент - занимает оставшееся пространство */}
+          <div className=" col-lg-10 p-2">
+            {renderComponent()}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
