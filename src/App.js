@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./CSS/App.css";
 import Balance from "./Components/Balance";
 import Receipts from "./Components/Receipts";
-import UnitOfMeasurement from "./Components/UnitOfMeasurement";
+import UnitOfMeasurement from "./Components/Units/UnitOfMeasurement";
 import Resources from "./Components/Resources";
 
 function App() {

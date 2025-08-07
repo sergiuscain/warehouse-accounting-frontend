@@ -23,3 +23,13 @@
 .hover-darken:active {
   background-color: rgba(0, 0, 0, 0.4) !important;
 }
+
+/* Cтиль для указателя при наведении */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* Стиль для строк таблицы при наведении */
+.table-hover tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
