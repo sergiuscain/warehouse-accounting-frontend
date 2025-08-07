@@ -11,6 +11,7 @@
 
 .menu-body{
     background: linear-gradient(#090b80, #411731);
+    min-height: 100vh;
 }
 
 .hover-darken {

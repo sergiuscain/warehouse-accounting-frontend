@@ -1,6 +1,6 @@
 function LeftMenu({ setActiveComponent }) {
   return (
-    <div className="d-flex flex-column">
+    <div className="d-flex flex-column leftMenu h-100">
       <div className="menu-header p-3 menu-top-text-block">
         <h2 className="menu-top-text">Управление складом</h2>
       </div>
