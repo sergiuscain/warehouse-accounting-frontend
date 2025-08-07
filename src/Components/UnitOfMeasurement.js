@@ -57,7 +57,10 @@ function UnitOfMeasurement() {
       )}
       
       {view === 'archive' && (
-        <ArchivedUnits onBack={handleBackToList} />
+        <ArchivedUnits 
+          onBack={handleBackToList}
+          onUnitClick={handleUnitClick}
+        />
       )}
     </div>
   );

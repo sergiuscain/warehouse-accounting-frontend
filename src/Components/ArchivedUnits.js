@@ -1,12 +1,12 @@
 // Components/ArchivedUnits.js
 import { useState, useEffect } from 'react';
 
-function ArchivedUnits({ onBack }) {
+function ArchivedUnits({ onBack, onUnitClick }) {
   const [units, setUnits] = useState([]);
 
   useEffect(() => {
     const fetchArchivedUnits = async () => {
-      const response = await fetch('/api/UnitOfMeasurement/GetByStatus?isActive=false');
+      const response = await fetch('https://localhost:7097/api/UnitOfMeasurement/GetByStatus?isActive=false');
       const data = await response.json();
       setUnits(data);
     };
@@ -26,9 +26,13 @@ function ArchivedUnits({ onBack }) {
       
       <div className="list-group">
         {units.map(unit => (
-          <div key={unit.id} className="list-group-item">
-            {unit.name} ({unit.symbol})
-          </div>
+          <button
+            key={unit.id}
+            className="list-group-item list-group-item-action"
+            onClick={() => onUnitClick(unit)}
+          >
+            {unit.name}
+          </button>
         ))}
       </div>
     </div>

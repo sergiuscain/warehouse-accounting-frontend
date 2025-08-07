@@ -3,8 +3,8 @@ function AddUnit({ onBack }) {
     e.preventDefault();
     const formData = new FormData(e.target);
     const unitData = {
-      Name: formData.get('name'), // Исправлено: 'name' вместо 'Name'
-      IsActive: true // Добавляем значение по умолчанию
+      Name: formData.get('name'), 
+      IsActive: true
     };
     
     try {
@@ -37,7 +37,7 @@ function AddUnit({ onBack }) {
           <input 
             type="text" 
             className="form-control" 
-            name="name" // Это имя используется в FormData
+            name="name" 
             required 
           />
         </div>
